@@ -165,7 +165,7 @@ POLICY
 
 variable "s3_vpc_endpoint_route_table_ids" {
   description = "By default routes to the s3 endpoint are added for private subnet route tables. Pass additional route table ids that require routes."
-  type = list(string)
+  type = tolist(string)
   default = []
 }
 

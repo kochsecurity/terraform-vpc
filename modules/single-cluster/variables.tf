@@ -4,17 +4,17 @@ variable "vpc_cidr" {
 }
 
 variable "public_subnets_list" {
-  type        = list(string)
+  type        = tolist(string)
   description = "A list of the subnets to create for public subnets"
 }
 
 variable "private_subnets_list" {
-  type        = list(string)
+  type        = tolist(string)
   description = "A list of the subnets to create for private subnets"
 }
 
 variable "admin_subnets_list" {
-  type        = list(string)
+  type        = tolist(string)
   description = "A list of the subnets to create for admin subnets"
   default     = null
 }
